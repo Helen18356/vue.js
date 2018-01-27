@@ -19,14 +19,14 @@ export default {
   data() {
     return {
       isScrolled:
-      document.body.scrollTop > 100 || document.documentElement.scrollTop > 100,
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100,
     };
   },
 
   components: {
     Navigation,
   },
-
 
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
@@ -39,7 +39,8 @@ export default {
   methods: {
     handleScroll() {
       this.isScrolled =
-        document.body.scrollTop > 100 || document.documentElement.scrollTop > 100;
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100;
     },
   },
 };
@@ -54,7 +55,7 @@ header {
 
   z-index: 1;
 
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &.scrolled {
     position: fixed;
@@ -62,6 +63,7 @@ header {
     left: 0;
     right: 0;
     background-color: #fff;
+    box-shadow: 1px 1px 16px #ccc;
 
     h1,
     a,
